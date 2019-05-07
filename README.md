@@ -1,2 +1,2 @@
 # User-Management-System
-This is a web based application, in this project login id &amp; password is sent on email, account activation, change password. PHP with MySQL, HTML, CSS, JavaScript and Bootstrap 3 is used.
+This is a web based application, in this project login id &amp; password is sent on email, account activation, change password. PHP with MySQL, HTML, CSS, JavaScript and Bootstrap 3 is used. If you download this project and you wil make setting on your localhost, email functionality will not work in localhost, you have to make it live. I have tested this project on live server and email functionaity is working properly. 
