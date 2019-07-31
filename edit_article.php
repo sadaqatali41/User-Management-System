@@ -51,12 +51,12 @@ include("includes/connect.php");
 							$filename=$row['filename'];
 						}
 						
-						mysqli_query($con,"update news set
+						mysqli_query($con,"UPDATE news SET
 						category='$cat',
 						title='$title',
 						description='$desc',
 						filename='$filename'
-						 where id=$id");
+						 WHERE id=$id");
 						 if(mysqli_affected_rows($con)>0)
 						 {
 							setcookie("success","Article updated Successfully",time()+3); 

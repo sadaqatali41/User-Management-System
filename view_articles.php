@@ -6,6 +6,7 @@ include("includes/header.php");
  if(isset($_SESSION['loggedin']))
  {
 	 include("includes/connect.php");
+	 //$userid = $_SESSION['loggedin'];
 	 $result = mysqli_query($con,"SELECT * FROM news");
 	 if(mysqli_num_rows($result)>0)
 	 {
@@ -42,7 +43,7 @@ include("includes/header.php");
 					<td><?php echo $row['category'];?></td>
 					<td>
 						<?php if($row['filename']!=""){?>
-						<img src="news/<?php echo $row['filename']?>" height="100" width="100">
+						<img src="news/<?php echo $row['filename']?>" height="100" width="100" style="cursor: pointer;">
 						<?php 
 						}
 						
@@ -100,8 +101,42 @@ include("includes/header.php");
 		window.location="delete_article.php?aid="+id;
 	}
  }
- </script>
- 
- <?php
+</script>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <p>
+        	<img src="" id="preview_image" height="100%" width="100%" class="img-thumbnail">
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal" title="Close">x</button>
+      </div>
+    </div>
+  </div>
+</div>
+<?php
 include("includes/footer.php");
- ?>
+?>
+<script type="text/javascript">
+	$(window).on('load',function(){
+		$('table img').click(function(){
+			var src = $(this).attr('src');
+			var category = $(this).parent().prev().text();
+			$('.modal-title').html(category);
+			$('#preview_image').attr('src',src);
+			$('#myModal').modal({
+				show: true,
+				backdrop: 'static',
+    			keyboard: false
+			});
+
+		});
+	});
+</script>

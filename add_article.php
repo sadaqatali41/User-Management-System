@@ -32,9 +32,9 @@ if(isset($_SESSION['loggedin']))
 					}
 					$ip=$_SERVER['REMOTE_ADDR'];
 					
-					mysqli_query($con,"insert into news(title,
+					mysqli_query($con,"INSERT INTO news(title,
 					description,filename,category,date,ip)
-					values('$title','$desc','$filename','$cat',
+					VALUES('$title','$desc','$filename','$cat',
 					NOW(),'$ip')");
 					if(mysqli_affected_rows($con)>0)
 					{

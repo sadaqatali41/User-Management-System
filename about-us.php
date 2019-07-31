@@ -3,7 +3,7 @@ include("includes/header.php");
 ?>
 
 	<div class="container">
-		<h1 class="text-center"><i>Contact Page</i></h1>
+		<h1 class="text-center"><i>About Us</i></h1>
 		<table class="table table-striped">
 		    <thead>
 		      <tr>
@@ -37,6 +37,12 @@ include("includes/header.php");
 		        <td>aamirbltr@gmail.com</td>
 		        <td>9052339029</td>
 		        <td>B-Tech(CS) 2018</td>
+		      </tr>
+		      <tr>
+		        <td>Sagar Nalluri</td>
+		        <td>sagarnalluri22@gmail.com</td>
+		        <td>9059586793</td>
+		        <td>B-Tech(CS) 2015</td>
 		      </tr>
 		    </tbody>
 		  </table>

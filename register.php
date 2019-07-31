@@ -26,10 +26,10 @@ include("includes/header.php");
 				$terms=$_POST['terms'];
 				$ip=$_SERVER['REMOTE_ADDR'];
 			//4.3=Insert Data into DB(Before insert create table)
-			mysqli_query($con,"insert into register(username,
+			mysqli_query($con,"INSERT INTO register(username,
 			email,password,mobile,
 			gender,city,state,address,terms,date_of_reg,ip) 
-			values('$name','$email','$pass','$mobile',
+			VALUES('$name','$email','$pass','$mobile',
 			'$gender','$city','$state','$address',
 			'$terms',NOW(),'$ip')");
 			if(mysqli_affected_rows($con)>0)

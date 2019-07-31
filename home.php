@@ -12,7 +12,7 @@ if(isset($_SESSION['loggedin']))
 	?>
 		<div class="container">
 			<h1>Welcome to 
-			<?php echo strtoupper($row['username']);?></h1>
+			<?php echo ucfirst($row['username']);?></h1>
 			<?php 
 			if($row['profile_pic']!="")
 			{

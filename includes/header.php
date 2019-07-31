@@ -61,6 +61,11 @@
 						<li class="">
 							<a class="mydrop" href="view_articles.php">View Articles</a>
 						</li>
+						<?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == 4): ?>
+						<li class="">
+							<a class="mydrop" href="contact-us-list.php">Contact List</a>
+						</li>
+						<?php endif; ?>
 					  </ul>
 					</li>
 					<li class="nav-item">
@@ -81,10 +86,12 @@
 					  <a class="nav-link" href="layout.php">Layout</a>
 					</li> -->
 					
-					 <li class="nav-item">
-					  <a class="nav-link" href="contact.php">Contact us</a>
+					<li class="nav-item">
+					  <a class="nav-link" href="about-us.php">About us</a>
 					</li>
-					
+					<li class="nav-item">
+					  <a class="nav-link" href="contact-us.php">Contact us</a>
+					</li>
 					<li class="nav-item" style="margin-right:10px;">
 					  <a class="nav-link btn btn-primary" style="color:white" href="register.php">Register</a>
 					</li>
